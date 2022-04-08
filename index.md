@@ -99,11 +99,11 @@ It should also be possible to use the user events API to view all of your person
    - private repos on GitHub.com
    - repos in self-hosted GitHub Enterprise
 * If you find misconfigurations during the above steps consider incident response approach. This is likely to be challenging as we have identified issues going back at least 10 years. We would recommend seeking IR expert advice if you have been affected. 
-* If you use self-hosted Git Enterprise - Roll your own credentials as these are not controlled by Git
-* If you find leaked secrets in private repo metadata, roll these yourself as these are not automatically changed by GitHub.
+* If you use self-hosted Git Enterprise - rotate your own credentials as these are not controlled by Git
+* If you find leaked secrets in private repo metadata, rotate these yourself as these are not automatically changed by GitHub.
 * You should also rotate any credentials on any other systems where they may have been reused. 
 * Enable MFA (Multi-Factor Authentication / also sometimes called Two Step Verification) everywhere it's supported. 
-* Link to relevant NCSC Advice - 
+* Review relevant NCSC Advice: 
    - https://www.ncsc.gov.uk/collection/developers-collection/principles/protect-your-code-repository
    - https://www.ncsc.gov.uk/collection/passwords/updating-your-approach 
 
@@ -173,10 +173,10 @@ As with all research other people
 contributed advice and guidance along the way including, but not limited to:
 * UK’s National Cyber Security Centre (NCSC)
 * Marcus Pinto (MDSec)
-* Carolos Foscolos - who provided the GitBleed[^4] Logo as well as advice
+* Carolos Foscolos - who provided the logo as well as advice
 
 # Name
-When we first started researching this issue (July/August 2021) Carolos Foscolos came up with the name GitBleed, he also created a logo and registered ```gitbleed.com```. 
+When we first started researching this issue (July/August 2021) Carolos Foscolos came up with the name GitBleed[^4], he also created a logo and registered ```gitbleed.com```. 
 We also then registered gitbleed as a github handle, gitbleed@gmail.com and @gitbleed on twitter. We've been holding off publishing details to allow GitHub
 time to implement mitigations. 
 

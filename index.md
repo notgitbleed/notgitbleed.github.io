@@ -2,14 +2,14 @@
 Due to configuration errors or human error, significant numbers of people may have accidentally checked GitHub credentials 
 into GitHub commits as metadata, most commonly a username as the author name and a password in the email address field.
 We estimate in the region of 50,000 to 100,000[^1] user credentials may have been affected covering a wide range of 
-organisations including governments, corporations, large open source foundations as well as smaller organisations and 
+organisations including governments, corporations, large open-source foundations as well as smaller organisations and 
 individuals. 
 
 GitHub have since rolled out changes that auto revoke PAT tokens and GitHub credentials if they are detected in commit metadata and have performed the task retroactively so any developer on GitHub.com who may have been affected in the past should have received an email already.
 
 While GitHub has a form of MFA known as 'Verified Device' [https://github.blog/changelog/2019-07-01-verified-devices/], many users still choose to re-use the same password across multiple services so it's important to check if you have accidentally committed any credential and what the risks are related to your account and any organisation you are connected to.
 
-As there are still leaked credentials associated with this issue in GitHub and other data stores we've chosen not to disclose any
+As there are still leaked credentials associated with this issue in GitHub and other datastores we've chosen not to disclose any
 specific details about affected organisations or repos at this time. 
 
 
@@ -28,7 +28,7 @@ PAT token that would have allowed us to write to at least some of the repos belo
 Automating the scanning process and choosing some large public organisations, we discovered that while it was a rare 
 event, it was happening and had been happening for many years without many developers realising. With the huge numbers
 of commits on GitHub even comparatively rare events occur a significant number of times. The implications were 
-terrifying. Many open source projects may have been disclosing developer credentials in clear text in the very 
+terrifying. Many open-source projects may have been disclosing developer credentials in clear text in the very 
 metadata of their projects.
 
 # Root cause
@@ -40,13 +40,13 @@ The following screenshot shows as an example what Intellij looks like when you a
 ![GitHub committer-email search ](gitbleed_ide_prompt.png)
 
 There could be other reasons for this, including bugs in automation scripts and possibly a misunderstanding of the git CLI. 
-However, as well as passwords we found lots of other bits of information such as left over command line parameters and 
+However, as well as passwords we found lots of other bits of information such as left-over command line parameters and 
 even extensive internal LDAP group information.
 
 
 # How to see if you are affected
 All our research was focused on GitHub, both GitHub enterprise (on-prem) and GitHub.com as that is the tooling used 
-by our clients. However it is possible that other code repository systems are also affected by this or a similar issue. 
+by our clients. However, it is possible that other code repository systems are also affected by this or a similar issue. 
 
 In a future blog post we'll go into more details of the scripts we used to investigate this issue, along with some other external 
 sources of data that also leaked GitHub credential information. 
@@ -58,7 +58,7 @@ If you think you may have been affected, checking your git config is the first s
 
 ## Git Log
 This method is perhaps the least automated but also the simplest. Clone a repo that you have pushed to, navigate to that directory and run `git log| grep Author | grep -v @`.
-This method is not foolproof however and anyone who has an @ sign in their password would need to perform an enhanced version of this grep as it would otherwise be removed from the results.
+This method is not fool proof however and anyone who has an @ sign in their password would need to perform an enhanced version of this grep as it would otherwise be removed from the results.
 
 ## GitHub Search
 You can use the GitHub Advanced Search interface 'GitHub Searching Commits'[https://docs.github.com/en/search-github/searching-on-github/searching-commits] to search commit metadata, for example using ```committer-email```, the most common place we found passwords. It was easy to identify users who had committed well-known common passwords. However, while this does work it would also potentially expose any password you are searching for in browser history and web logs etc and should only really be used for research purposes.
@@ -88,14 +88,14 @@ def search_api(password: str) -> int:
 
 Whilst GitHub have implemented a number of mitigations it is still possible to find examples of secrets in commit metadata.
 
-It should also be possible to use the user events api to view all of your personal commit data too however the GitHub documentation suggests you may be limited in the number of events and the timelines for which you can search [https://docs.github.com/en/rest/reference/activity#events]
+It should also be possible to use the user events API to view all of your personal commit data too however the GitHub documentation suggests you may be limited in the number of events and the timelines for which you can search [https://docs.github.com/en/rest/reference/activity#events]
 
 # Recommendations
 ## For GitHub Users
 * Review IDE and Git configuration files for mis-configurations - see [Check Git Config](#check-git-config)
 * Review automation scripts that interact with Git
 * Check metadata for any:
-   - non GitHub repositories you use
+   - non-GitHub repositories you use
    - private repos on GitHub.com
    - repos in self-hosted GitHub Enterprise
 * If you find misconfigurations during the above steps consider incident response approach. This is likely to be challenging as we have identified issues going back at least 10 years. We would recommend seeking IR expert advice if you have been affected. 
@@ -112,13 +112,13 @@ It should also be possible to use the user events api to view all of your person
 
 # Other Considerations
 ## Software Supply Chain
-We found leaked credentials in a number of very popular open source projects. We scanned all the repos in a sample of 70 Open Source 
-Organisations used by one our clients and in approximately half of them found strings which looked like plausible passwords, as well as some PATs. 
+We found leaked credentials in a number of very popular open-source projects. We scanned all the repos in a sample of 70 open-source 
+organisations used by one our clients and in approximately half of them found strings which looked like plausible passwords, as well as some PATs. 
 These in theory could have been used to make unauthorised changes to these projects. 
  
 
 ## External Authentication Providers
-For organisations using an external identity provider, e.g., via SAML, GitHub should have no knowledge of the actual credentials. Therefore the automated security checking implemented by GitHub to prevent users from accidentally leaking credentials in commit data may not detect these.
+For organisations using an external identity provider, e.g., via SAML, GitHub should have no knowledge of the actual credentials. Therefore, the automated security checking implemented by GitHub to prevent users from accidentally leaking credentials in commit data may not detect these.
 
 ## Cross domain commits
 Users may commit across a range of domains, including to on-prem hosted GitHub Enterprise, GitHub.com and to repos in multiple organisations. This has a number
@@ -135,8 +135,8 @@ Whilst GitHub started to deploy some remediation in September 2021 there were, a
 GitHub had completed the majority of their remediation work.
 
 * July 2021 - Found fist instance on GitHub Enterprise server when a developer asked 'How do I change my password'
-* 12th August 20201 - Contacted GitHub via hackerone
-* 16th August 2021 - hackerone closed issue
+* 12th August 20201 - Contacted GitHub via HackerOne
+* 16th August 2021 - HackerOne closed issue
 * 27th August 2021  - Escalated to clients GitHub Account Manager
 * 2nd September 2021 - Started discussions with GitHub Security Team
 * 7th September 2021 - Sought advice from NCSC Vulnerability team due to widespread nature of the issue 
@@ -162,7 +162,7 @@ We plan to release more details in the coming weeks which will include:
 * An overview of the automated scanner and the evolution of this tooling
 * Other Data sources we found that leaked secret data from GitHub commit metadata
 * Sample testing against the ';--have i been pwned?[^2] dataset
-* Overview of bug reporting process, including interaction with hackerone[^3]
+* Overview of bug reporting process, including interaction with HackerOne[^3]
 * Some stats
 
 

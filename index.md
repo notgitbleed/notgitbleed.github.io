@@ -185,7 +185,6 @@ In the meantime other researchers found an issue with
 [https://wwws.nightwatchcybersecurity.com/2022/02/11/gitbleed/] and named it GitBleed. As nameing things is one of the two hard problems in computer science[^5] 
 and the issue we've been researching is no longer 'GitBleed', we've gone with NotGitBleed. 
 
-
 # Footnotes
 [^1]: 50,000 to 100,000 figure is based on extrapolating data obtained for all commits within a range of fixed periods as we didn't have the time or resources to search every commit in GitHubs history.  
 

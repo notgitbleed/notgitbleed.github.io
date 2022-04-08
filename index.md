@@ -99,7 +99,7 @@ It should also be possible to use the user events API to view all of your person
    - private repos on GitHub.com
    - repos in self-hosted GitHub Enterprise
 * If you find misconfigurations during the above steps consider incident response approach. This is likely to be challenging as we have identified issues going back at least 10 years. We would recommend seeking IR expert advice if you have been affected. 
-* If you use self hosted Git Enterprise - Roll your own credentials as these are not controlled by Git
+* If you use self-hosted Git Enterprise - Roll your own credentials as these are not controlled by Git
 * If you find leaked secrets in private repo metadata, roll these yourself as these are not automatically changed by GitHub.
 * You should also rotate any credentials on any other systems where they may have been reused. 
 * Enable MFA (Multi-Factor Authentication / also sometimes called Two Step Verification) everywhere it's supported. 
@@ -192,6 +192,6 @@ and the issue we've been researching is no longer 'GitBleed', we've gone with No
 
 [^3]: https://www.hackerone.com
 
-[^4]: The name was selected because although it is not the same level of concern as things like heartbleed the potential to backdoor third party dependencies was serious enough that we wanted a catchy name.
+[^4]: The name was selected because the potential to backdoor third-party dependencies is serious enough that we wanted a catchy name.
 
 [^5]: https://lmgtfy.app/?q=there+are+only+two+hard+things+in+computer+science

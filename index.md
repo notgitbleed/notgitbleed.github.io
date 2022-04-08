@@ -190,8 +190,7 @@ and the issue we've been researching is no longer 'GitBleed', we have gone with 
 
 [^2]: [https://haveibeenpwned.com](https://haveibeenpwned.com)
 
-[^3]: [https://www.hackerone.com](https://www.hackerone.com
-)
+[^3]: [https://www.hackerone.com](https://www.hackerone.com)
 
 [^4]: The name was selected because the potential to backdoor third-party dependencies is serious enough that we wanted a catchy name.
 

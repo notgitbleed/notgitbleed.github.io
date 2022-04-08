@@ -177,13 +177,13 @@ contributed advice and guidance along the way including, but not limited to:
 
 # Name
 When we first started researching this issue (July/August 2021) Carolos Foscolos came up with the name GitBleed[^4], he also created a logo and registered ```gitbleed.com```. 
-We also then registered gitbleed as a github handle, gitbleed@gmail.com and @gitbleed on twitter. We've been holding off publishing details to allow GitHub
+We also then registered gitbleed as a github handle, gitbleed@gmail.com and @gitbleed on twitter. We have been holding off publishing details to allow GitHub
 time to implement mitigations. 
 
 In the meantime, other researchers found an issue with 
  information leaking from a GitHub repo when using the ```--mirror``` switch with ```git clone``` 
 [https://wwws.nightwatchcybersecurity.com/2022/02/11/gitbleed/] and named it GitBleed. As naming things is one of the two hard problems in computer science[^5] 
-and the issue we've been researching is no longer 'GitBleed', we've gone with NotGitBleed. 
+and the issue we've been researching is no longer 'GitBleed', we have gone with NotGitBleed. 
 
 # Footnotes
 [^1]: 50,000 to 100,000 figure is based on extrapolating data obtained for all commits within a range of fixed periods as we didn't have the time or resources to search every commit in GitHubs history.  

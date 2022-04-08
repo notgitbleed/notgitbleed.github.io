@@ -35,7 +35,7 @@ metadata of their projects.
 When the developer first spoke to us, they explained that they were setting up an IDE on their machine and that 
 through setting up a new project, they were prompted for a git author name and email address. However due to muscle memory and seeing a prompt similar to a login screen, they entered their credentials which were saved as commit metadata every time they committed to any repo. 
 
-The following screenshot shows as an example what Intellij looks like when you attempt to commit to a repo with no configured author details. Anything you enter here will be saved in a location such as `~/.gitconfig` and the contents committed to git any time there is a `git push` on this device.
+The following screenshot shows as an example of what IntelliJ looks like when you attempt to commit to a repo with no configured author details. Anything you enter here will be saved in a location such as `~/.gitconfig` and the contents committed to git any time there is a `git push` on this device.
 
 ![GitHub committer-email search ](gitbleed_ide_prompt.png)
 
@@ -173,7 +173,7 @@ As with all research other people
 contributed advice and guidance along the way including, but not limited to:
 * UK’s National Cyber Security Centre (NCSC)
 * Marcus Pinto (MDSec)
-* Carolos Foscolos - who provided the logo as well as advice
+* Carolos Foscolos ([Codollo](https://www.codollo.com)) - who provided the logo as well as advice
 
 # Name
 When we first started researching this issue (July/August 2021) Carolos Foscolos came up with the name GitBleed[^4], he also created a logo and registered ```gitbleed.com```. 

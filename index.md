@@ -7,7 +7,7 @@ individuals.
 
 GitHub have since rolled out changes that auto revoke PAT tokens and GitHub credentials if they are detected in commit metadata and have performed the task retroactively so any developer on GitHub.com who may have been affected in the past should have received an email already.
 
-While GitHub has a form of MFA known as 'Verified Device' [https://github.blog/changelog/2019-07-01-verified-devices/], many users still choose to re-use the same password across multiple services so it's important to check if you have accidentally committed any credential and what the risks are related to your account and any organisation you are connected to.
+While GitHub has a form of MFA known as 'Verified Device' [https://github.blog/changelog/2019-07-01-verified-devices/](https://github.blog/changelog/2019-07-01-verified-devices/), many users still choose to re-use the same password across multiple services so it's important to check if you have accidentally committed any credential and what the risks are related to your account and any organisation you are connected to.
 
 As there are still leaked credentials associated with this issue in GitHub and other datastores we've chosen not to disclose any
 specific details about affected organisations or repos at this time. 
@@ -61,7 +61,7 @@ This method is perhaps the least automated but also the simplest. Clone a repo t
 This method is not fool proof however and anyone who has an @ sign in their password would need to perform an enhanced version of this grep as it would otherwise be removed from the results.
 
 ## GitHub Search
-You can use the GitHub Advanced Search interface 'GitHub Searching Commits'[https://docs.github.com/en/search-github/searching-on-github/searching-commits] to search commit metadata, for example using ```committer-email```, the most common place we found passwords. It was easy to identify users who had committed well-known common passwords. However, while this does work it would also potentially expose any password you are searching for in browser history and web logs etc and should only really be used for research purposes.
+You can use the GitHub Advanced Search interface 'GitHub Searching Commits' [https://docs.github.com/en/search-github/searching-on-github/searching-commits](https://docs.github.com/en/search-github/searching-on-github/searching-commits) to search commit metadata, for example using ```committer-email```, the most common place we found passwords. It was easy to identify users who had committed well-known common passwords. However, while this does work it would also potentially expose any password you are searching for in browser history and web logs etc and should only really be used for research purposes.
 
 ![GitHub committer-email search ](GitHubSeach_committer-email.png)
 
@@ -88,7 +88,7 @@ def search_api(password: str) -> int:
 
 Whilst GitHub have implemented a number of mitigations it is still possible to find examples of secrets in commit metadata.
 
-It should also be possible to use the user events API to view all of your personal commit data too however the GitHub documentation suggests you may be limited in the number of events and the timelines for which you can search [https://docs.github.com/en/rest/reference/activity#events]
+It should also be possible to use the user events API to view all of your personal commit data too however the GitHub documentation suggests you may be limited in the number of events and the timelines for which you can search [https://docs.github.com/en/rest/reference/activity#events](https://docs.github.com/en/rest/reference/activity#events)
 
 # Recommendations
 ## For GitHub Users
@@ -104,8 +104,8 @@ It should also be possible to use the user events API to view all of your person
 * You should also rotate any credentials on any other systems where they may have been reused. 
 * Enable MFA (Multi-Factor Authentication / also sometimes called Two Step Verification) everywhere it's supported. 
 * Review relevant NCSC Advice: 
-   - https://www.ncsc.gov.uk/collection/developers-collection/principles/protect-your-code-repository
-   - https://www.ncsc.gov.uk/collection/passwords/updating-your-approach 
+   - [https://www.ncsc.gov.uk/collection/developers-collection/principles/protect-your-code-repository](https://www.ncsc.gov.uk/collection/developers-collection/principles/protect-your-code-repository)
+   - [https://www.ncsc.gov.uk/collection/passwords/updating-your-approach](https://www.ncsc.gov.uk/collection/passwords/updating-your-approach)
 
 ## For Git clients and IDEs
 * Apply input validation to fields, especially the email field and display warnings to users if the data doesn't match the expected format.
@@ -182,16 +182,17 @@ time to implement mitigations.
 
 In the meantime, other researchers found an issue with 
  information leaking from a GitHub repo when using the ```--mirror``` switch with ```git clone``` 
-[https://wwws.nightwatchcybersecurity.com/2022/02/11/gitbleed/] and named it GitBleed. As naming things is one of the two hard problems in computer science[^5] 
+[https://wwws.nightwatchcybersecurity.com/2022/02/11/gitbleed/](https://wwws.nightwatchcybersecurity.com/2022/02/11/gitbleed/) and named it GitBleed. As naming things is one of the two hard problems in computer science[^5] 
 and the issue we've been researching is no longer 'GitBleed', we have gone with NotGitBleed. 
 
 # Footnotes
 [^1]: 50,000 to 100,000 figure is based on extrapolating data obtained for all commits within a range of fixed periods as we didn't have the time or resources to search every commit in GitHubs history.  
 
-[^2]: https://haveibeenpwned.com
+[^2]: [https://haveibeenpwned.com](https://haveibeenpwned.com)
 
-[^3]: https://www.hackerone.com
+[^3]: [https://www.hackerone.com](https://www.hackerone.com
+)
 
 [^4]: The name was selected because the potential to backdoor third-party dependencies is serious enough that we wanted a catchy name.
 
-[^5]: https://lmgtfy.app/?q=there+are+only+two+hard+things+in+computer+science
+[^5]: [https://lmgtfy.app/?q=there+are+only+two+hard+things+in+computer+science](https://lmgtfy.app/?q=there+are+only+two+hard+things+in+computer+science)

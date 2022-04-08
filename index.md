@@ -99,7 +99,7 @@ It should also be possible to use the user events API to view all of your person
    - private repos on GitHub.com
    - repos in self-hosted GitHub Enterprise
 * If you find misconfigurations during the above steps consider incident response approach. This is likely to be challenging as we have identified issues going back at least 10 years. We would recommend seeking IR expert advice if you have been affected. 
-* If you use self-hosted Git Enterprise - rotate your own credentials as these are not controlled by Git
+* If you use self-hosted GitHub Enterprise - rotate your own credentials as these are not controlled by GitHub
 * If you find leaked secrets in private repo metadata, rotate these yourself as these are not automatically changed by GitHub.
 * You should also rotate any credentials on any other systems where they may have been reused. 
 * Enable MFA (Multi-Factor Authentication / also sometimes called Two Step Verification) everywhere it's supported. 

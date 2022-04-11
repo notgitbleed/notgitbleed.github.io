@@ -1,4 +1,4 @@
-# TL;DR 
+# NotGitBleed - TL;DR 
 Due to configuration errors or human error, significant numbers of people may have accidentally checked GitHub credentials 
 into GitHub commits as metadata, most commonly a username as the author name and a password in the email address field.
 We estimate in the region of 50,000 to 100,000[^1] user credentials may have been affected covering a wide range of 

@@ -179,7 +179,7 @@ contributed advice and guidance along the way including, but not limited to:
 
 # Name
 When we first started researching this issue (July/August 2021) Carolos Foscolos came up with the name GitBleed[^4], he also created a logo and registered ```gitbleed.com```. 
-We also then registered gitbleed as a github handle, gitbleed@gmail.com and @gitbleed on twitter. We have been holding off publishing details to allow GitHub
+We also then registered gitbleed as a github handle and @gitbleed on twitter etc. We have been holding off publishing details to allow GitHub
 time to implement mitigations. 
 
 In the meantime, other researchers found an issue with 

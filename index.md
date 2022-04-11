@@ -13,7 +13,7 @@ As there are still leaked credentials associated with this issue in GitHub and o
 specific details about affected organisations or repos at this time. 
 
 
-# How did we find the issue
+# How we found the issue
 We were first alerted to this form of credential leak by a developer who had accidentally committed their username as 
 their committer name and their password as their committer email address. Interested by this, we manually analysed 
 several internal repos for this particular client and found that this had happened before a number of times over 
@@ -167,7 +167,9 @@ We plan to release more details in the coming weeks which will include:
 
 
 # Researchers
-This research was lead by Aaron Devaney (MDSec) supported by Will Deane (ASX Consulting Ltd). 
+This research was lead by:
+* Aaron Devaney (https://www.mdsec.co.uk/) 
+* supported by Will Deane (ASX Consulting Ltd). 
 
 As with all research other people
 contributed advice and guidance along the way including, but not limited to:

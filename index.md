@@ -153,6 +153,7 @@ commit for GitHub tokens and  automatically revoking the token and notifying the
 metadata and issues / comments. GitHub acknowledged this will take a while to roll out, since it requires partners to start parsing updated 
 details in the webhooks when sending them discovered credentials.
 * 23rd March 2022 - GitHub contacted us to start the process of co-ordinated disclosure as they plan to publish a change log for the soon to be released Secret Scanning for credentials feature.  
+* 11th April 2022 - Coordinated disclosure with GitHub (https://github.blog/changelog/2022-04-11-secret-scanning-detects-and-revokes-leaked-passwords/)
 
 
 # Future posts 

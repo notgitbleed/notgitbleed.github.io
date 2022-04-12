@@ -1,7 +1,3 @@
-layout: page
-title: !GitBleed
-permalink: /gitbleed/
-
 # !GitBleed
 ## Issues
 There are two separate but related issues that independently picked the name GitBleed; the second of these to be published has 

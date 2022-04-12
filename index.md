@@ -135,19 +135,19 @@ Whilst GitHub started to deploy some remediation in September 2021 there were, a
 GitHub had completed the majority of their remediation work.
 
 * July 2021 - Found fist instance on GitHub Enterprise server when a developer asked 'How do I change my password'
-* 12th August 20201 - Contacted GitHub via HackerOne
+* 12th August 2021 - Contacted GitHub via HackerOne
 * 16th August 2021 - HackerOne closed issue
 * 27th August 2021  - Escalated to clients GitHub Account Manager
 * 2nd September 2021 - Started discussions with GitHub Security Team
 * 7th September 2021 - Sought advice from NCSC Vulnerability team due to widespread nature of the issue 
-* 17th September 2020 GitHub started:
+* 17th September 2021 - GitHub stated:
   - Scanning the commit metadata (author_email, author_name, committer_email, committer_name and message) as well as the rest of the  
 commit for GitHub tokens and  automatically revoking the token and notifying the owner. 
-* 22nd October 2021 GitHub confirmed they implemented: 
+* 22nd October 2021 - GitHub confirmed they implemented: 
   - Scanning of all historic commit metadata for PATs when a repo is transitioned from private to public and revoking any  found
 * 1st November 2021 - GitHub started: 
    - Scanning pull request, issue descriptions and comments for GitHub PATs, and automatically revoking any found
-* 8th March 2022 GitHub confirmed they:
+* 8th March 2022 - GitHub confirmed they:
   - Rolled out an auto-revoke flow for logins/passwords in new commit metadata including usernames / passwords as names or email metadata.
   - Started contacting members of the GitHub secret scanning partner program to let them know they plan to start sending them results found in commit 
 metadata and issues / comments. GitHub acknowledged this will take a while to roll out, since it requires partners to start parsing updated 
